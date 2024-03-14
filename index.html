@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Triangle Type Determiner</title>
+</head>
+<body>
+  <h1>Triangle Type: </h1>
+  <p id="tri"></p>
+
+  <script>
+    var a = r();
+    var b = r();
+    var c = r();
+
+   
+
+    function r(){
+    var x=1;
+    for( x; x==1; x++){
+        var y = prompt("Enter number: " );
+        if(isNaN(y)){
+            alert("You inputted not a number");
+            x = x -1;
+        }
+        else{
+            return y;
+        }
+    }
+}
+
+      dr(a, b, c);
+
+    function dr(a, b, c) {
+      if (a === b && b === c) {
+        document.getElementById("tri").innerHTML = "The triangle is an Equilateral triangle.";
+      } else if (a === b || b === c || c === a) {
+        document.getElementById("tri").innerHTML = "The triangle is an Isosceles triangle.";
+      } else {
+        document.getElementById("tri").innerHTML = "The triangle is a Scalene triangle.";
+      }
+    }
+  </script>
+</body>
+</html>
